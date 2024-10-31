@@ -1,0 +1,27 @@
+# Ignore Obsidian workspace and cache files
+.obsidian/workspace
+.obsidian/cache
+
+# Ignore backup or temp files
+*.bak
+*.temp
+*.tmp
+
+# Ignore system files and macOS specific files
+.DS_Store
+Thumbs.db
+
+
+
+# Ignore all files in .obsidian folder
+.obsidian/*
+
+# Track specific configuration files
+!.obsidian/plugins.json
+!.obsidian/some-important-config.json
+
+.smart-env
+.trash
+Context
+Misc/Canvases
+Misc/Excalidraw
