@@ -1,0 +1,264 @@
+/* view.css */
+
+/* Base styles for view wrapper and general dark theme */
+.main-container {
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Modify the grid to ensure full-width cards */
+.task-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.task-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.task-link {
+    color: #e0e0e0;
+    text-decoration: none;
+}
+
+.task-content {
+    flex: 1;
+    margin-right: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.task-due-date {
+    font-size: 14px;
+    color: #888;
+    margin-top: 8px;
+    flex: 1;
+    margin-right: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Adjust card styles to ensure full width */
+.task-card {
+    background-color: #3b3b3b;
+    color: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: none;
+}
+
+.task-link:hover {
+    text-decoration: underline;
+}
+
+.task-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.complete-button,
+.delete-button {
+    background-color: #4b4b4b;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.complete-button:hover,
+.delete-button:hover {
+    background-color: #5b5b5b;
+}
+
+.complete-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.complete-button:hover {
+    background-color: #388e3c;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Base Checkbox Styles */
+.complete-checkbox {
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border: 2px solid #4b4b4b;
+    border-radius: 4px;
+    background-color: #3b3b3b;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 16px;
+}
+
+
+complete-checkbox:checked {
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+
+complete-checkbox:checked::before {
+    content: '✓';
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Dropdown Button Styles with Border */
+.dropdown-button {
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    /* Increased font size */
+    padding: 12px 20px;
+    /* More padding */
+    border: 2px solid #4b4b4b;
+    /* Add a solid border */
+    border-radius: 8px;
+    /* Rounded corners */
+    background-color: #4b4b4b;
+    /* Matching background color */
+}
+
+.dropdown-button-text {
+    color: #e0e0e0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dropdown-button:hover {
+    background-color: #5b5b5b;
+    /* Change background color on hover */
+    border-color: #5b5b5b;
+    /* Match border to hover color */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #4b4b4b;
+    min-width: 180px;
+    /* Slightly wider */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    /* Darker shadow */
+    z-index: 1;
+    border-radius: 8px;
+    /* Consistent with the button */
+    padding: 12px;
+    /* More padding */
+}
+
+.dropdown-button:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-option {
+    color: #e0e0e0;
+    padding: 14px 18px;
+    /* More padding */
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #5b5b5b;
+}
+
+/* ---------------------------- */
+/* MOBILE DO NOT REMOVE */
+/* ---------------------------- */
+@media (max-width: 768px) {
+    .complete-checkbox {
+        width: 24px;
+        height: 24px;
+        margin-left: 12px;
+    }
+
+    .dropdown-button {
+        font-size: 14px;
+        /* Reduced font size for mobile */
+        padding: 10px 16px;
+        /* Reduced padding for mobile */
+    }
+
+    .complete-checkbox:checked::before {
+        line-height: 20px;
+        /* Adjusted for smaller checkbox */
+        font-size: 18px;
+        /* Adjusted font size for mobile */
+    }
+}
+
+.task-grid {
+    gap: 16px;
+}
+
+.task-card {
+    padding: 16px;
+}
+
+.task-content {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 10px;
+}
+
+.task-due-date {
+    font-size: 12px;
+    margin-top: 6px;
+}
+
+.task-actions {
+    margin-top: 12px;
+}
+
+.complete-button,
+.delete-button {
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-left: 6px;
+}
+
+.task-action-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.main-container {
+    padding: 16px;
+}

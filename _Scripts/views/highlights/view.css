@@ -1,0 +1,126 @@
+/* view.css */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.table-100,
+.table-max,
+.table-wide {
+    width: 100%;
+}
+
+.highlights-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.highlight-card {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.card-book {
+    border-left: 5px solid #1890ff;
+}
+
+.card-article {
+    border-left: 5px solid #52c41a;
+}
+
+.card-tweet {
+    border-left: 5px solid #faad14;
+}
+
+.card-podcast {
+    border-left: 5px solid #722ed1;
+}
+
+.card-default {
+    border-left: 5px solid #d9d9d9;
+}
+
+.highlight-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.highlight-author {
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+.highlight-content {
+    background-color: #3a3a3a;
+    border-left: 4px solid #1890ff;
+    padding: 0.5rem 1rem;
+    margin: 0 0 1rem 0;
+    font-style: italic;
+}
+
+.highlight-note-container {
+    background-color: #383838;
+    border-radius: 4px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight-note-label {
+    font-weight: bold;
+    color: #52c41a;
+    margin-right: 0.5rem;
+}
+
+.highlight-note-content {
+    margin: 0.5rem 0 0 0;
+    color: #d0d0d0;
+}
+
+.highlight-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.open-button {
+    background-color: #1890ff;
+}
+
+.open-button:hover {
+    background-color: #40a9ff;
+}
+
+.load-more-button {
+    align-self: center;
+    margin-top: 1rem;
+    background-color: #1890ff;
+}
+
+.load-more-button:hover {
+    background-color: #40a9ff;
+}

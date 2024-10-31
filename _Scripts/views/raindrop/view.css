@@ -1,0 +1,111 @@
+/* view.css */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.table-100,
+.table-max,
+.table-wide {
+    width: 100%;
+}
+
+.raindrops-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.raindrop-card {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    transition: box-shadow 0.3s ease;
+}
+
+.raindrop-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.raindrop-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.raindrop-link {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1890ff;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.raindrop-link:hover {
+    text-decoration: underline;
+}
+
+.raindrop-excerpt {
+    margin-bottom: 0.5rem;
+    color: #b0b0b0;
+}
+
+.raindrop-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+}
+
+.raindrop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.raindrop-tag {
+    background-color: #3a3a3a;
+    color: #b0b0b0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.open-button {
+    background-color: #1890ff;
+}
+
+.open-button:hover {
+    background-color: #40a9ff;
+}
+
+.load-more-button {
+    align-self: center;
+    margin-top: 1rem;
+    background-color: #1890ff;
+}
+
+.load-more-button:hover {
+    background-color: #40a9ff;
+}

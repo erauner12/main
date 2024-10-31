@@ -1,0 +1,556 @@
+/* view.css */
+
+/* ========== Global Styles ========== */
+
+.view-wrapper {
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* ========== Memo Grid ========== */
+
+.memo-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ========== Memo Card ========== */
+
+.memo-card {
+    position: relative;
+    background-color: #3b3b3b;
+    color: #e0e0e0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: none;
+}
+
+/* ========== Header Container ========== */
+
+@media (max-width: 768px) {
+    .header-container .memo-button {
+        font-size: 20px;
+        padding: 12px;
+        width: 56px;
+        height: 56px;
+        margin: 4px;
+        border-radius: 8px;
+    }
+}
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+        /* Add this line to allow wrapping */
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-container .memo-button:hover {
+    background-color: #6b6b6b;
+}
+.header-container .memo-button {
+    composes: base-button;
+    margin: 4px;
+        font-size: 16px;
+        padding: 10px;
+        width: 48px;
+        height: 48px;
+        border-radius: 6px;
+        transition: background-color 0.3s ease;
+        text-align: center;
+        background-color: #5b5b5b;
+        color: #e0e0e0;
+        border: 2px solid #e0e0e0;
+}
+
+
+/* ========== Immediate Actions Header ========== */
+
+.immediate-actions-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.immediate-actions-header .memo-button {
+    composes: base-button;
+    margin-left: 8px;
+    /* Added equal margin for spacing */
+}
+
+/* ========== Memo Card Header ========== */
+
+.memo-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.memo-card-header .memo-button {
+    composes: base-button;
+    margin-left: 8px;
+    /* Added equal margin for spacing */
+}
+
+/* ========== Memo Button Container ========== */
+
+.memo-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+.memo-button-container .memo-button {
+    composes: base-button;
+}
+
+/* ========== Memo Content ========== */
+
+.memo-content {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e0e0e0;
+    padding: 10px;
+}
+
+/* ========== Base Button Styles ========== */
+
+.base-button {
+    width: 56px;
+        /* Increase the width */
+        height: 48px;
+        /* Keep the height unchanged */
+    padding: 10px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    /* background-color: #5b5b5b; */
+    background-color: #5b5b5b;
+        /* Change the background color to a lighter shade */
+    
+        /* Change the background color to a darker shade */
+        color: #e0e0e0;
+            /* Change the text color to a lighter shade for better contrast */
+                border: 2px solid #e0e0e0;
+                /* Change the border color to a lighter shade and increase the thickness */
+        /* Change the border color to a darker shade */
+}
+
+.base-button:hover {
+    /* background-color: #6b6b6b; */
+    background-color: #6b6b6b;
+        /* Change the hover background color to a slightly lighter shade */
+        /* Change the border color to a lighter shade */
+        /* Change the hover background color to a slightly lighter shade */
+}
+
+/* ========== Button Variants ========== */
+
+.memo-button {
+    composes: base-button;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ========== Text Actions Dropdown ========== */
+
+.memo-button-container.text-actions-dropdown {
+    position: relative;
+    margin-left: 8px;
+    /* Added equal margin for spacing */
+}
+
+.memo-button-container.text-actions-dropdown .memo-button.dropdown-button {
+    composes: base-button;
+}
+
+
+/* ========== Dropdown Content ========== */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4b4b4b;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    top: 100%;
+    margin-top: 5px;
+    border-radius: 4px;
+}
+
+.dropdown-content .memo-button {
+    width: 100%;
+    text-align: left;
+    padding: 12px 16px;
+    margin: 0;
+    border-radius: 0;
+}
+
+.dropdown-content .memo-button:first-child {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.dropdown-content .memo-button:last-child {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* ========== Media Queries ========== */
+
+@media (max-width: 768px) {
+
+    .memo-card-header .memo-button,
+    .immediate-actions-header .memo-button {
+        font-size: 24px;
+            padding: 12px;
+        width: 56px;
+            height: 56px;
+            margin: 4px;
+        border-radius: 8px;
+        background-color: #5b5b5b;
+            /* Ensure the background color is consistent */
+            border: 2px solid #e0e0e0;
+            /* Add a light border */
+    }
+
+    .memo-card-header,
+    .immediate-actions-header {
+        display: flex;
+            flex-wrap: wrap;
+            /* Add this line to allow wrapping */
+        justify-content: flex-end;
+        margin-bottom: 10px;
+    }
+}
+
+.memo-card-header::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #757575;
+        /* Change the color to match your theme */
+            margin: 10px 0;
+            /* Adjust the margin as needed */
+}
+
+.memo-card.pinned {
+    background-color: #333300;
+    /* Dark yellow background color for pinned memos */
+    border: 2px solid #ffff00;
+    /* Bright yellow border for pinned memos */
+}
+
+
+/* search */
+
+/* Modify the search container styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+        /* Add this line to make the container take up the full width */
+}
+.search-input {
+    flex: 1;
+        /* Add this line to make the input field take up the remaining space */
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    margin-right: 8px;
+}
+
+.search-button {
+    background-color: #4b4b4b;
+    color: #e0e0e0;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+        /* Add this line to prevent the button text from wrapping */
+}
+
+.search-button:hover {
+    background-color: #5b5b5b;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    .search-container {
+        flex-wrap: nowrap;
+        /* Add this line to prevent the search bar and button from wrapping on mobile */
+    }
+
+    .search-input {
+        flex: 1;
+        padding: 10px;
+        /* Increase the padding for better touch target on mobile */
+        font-size: 16px;
+        /* Increase the font size for better readability on mobile */
+    }
+
+    .search-button {
+        padding: 10px 16px;
+        /* Increase the padding for better touch target on mobile */
+        font-size: 16px;
+        /* Increase the font size for better readability on mobile */
+    }
+}
+.memo-details-container {
+    display: flex;
+    align-items: baseline;
+        /* Ensures elements are aligned horizontally */
+}
+
+.memo-details {
+    flex: 1;
+        /* Takes up remaining space */
+}
+
+.memo-comment-count {
+    margin-left: auto;
+    /* Pushes the element to the right */
+    font-size: 12px;
+    color: #888;
+}
+.memo-time {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    /* Reset overall margin */
+    padding: 0;
+    /* Ensure no additional padding */
+    line-height: 1;
+    /* Tighten line spacing */
+    margin-top: 0 !important;
+    /* Force the margin-top to be 0 */
+    margin-bottom: 0 !important;
+    /* Prevent extra space below */
+}
+
+.memo-separator {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    /* Center the title horizontally */
+    margin-bottom: 20px;
+}
+
+.title-container h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* GLOBAL */
+
+@media (max-width: 768px) {
+    .global-button {
+        font-size: 16px;
+        /* Reduce the font size on mobile */
+        padding: 10px 16px;
+        /* Adjust the padding on mobile */
+    }
+}
+.global-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+        /* Add this line to allow wrapping */
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.global-button {
+    padding: 10px 20px;
+    /* Default padding */
+    border-radius: 4px;
+    /* Border radius for consistency */
+    border: none;
+    /* No border */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin: 4px;
+        /* Adjust the margin to provide consistent spacing */
+}
+
+
+.global-button:hover {
+    background-color: #0056b3;
+}
+
+.global-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+}
+
+.global-button:active {
+    background-color: #004085;
+}
+
+.global-button.all-button {
+    background-color: #28a745;
+}
+
+.global-button.all-button:hover {
+    background-color: #1e7e34;
+}
+
+.global-button.all-button:active {
+    background-color: #155724;
+}
+
+.global-button.side-memos-button {
+    background-color: #17a2b8;
+}
+
+.global-button.side-memos-button:hover {
+    background-color: #117a8b;
+}
+
+.global-button.side-memos-button:active {
+    background-color: #0c525d;
+}
+
+.global-button.work-memos-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.global-button.work-memos-button:hover {
+    background-color: #e0a800;
+}
+
+.global-button.work-memos-button:active {
+    background-color: #c69500;
+}
+
+.global-button.home-memos-button {
+    background-color: #007bff;
+}
+
+.global-button.home-memos-button:hover {
+    background-color: #0056b3;
+}
+
+.global-button.home-memos-button:active {
+    background-color: #004085;
+}
+
+/* ========== Personal Memos Button ========== */
+.global-button.personal-memos-button {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+.global-button.personal-memos-button:hover {
+    background-color: #e64a19;
+}
+
+.global-button.personal-memos-button:active {
+    background-color: #d84315;
+}
+
+.memo-button.delete-button {
+    background-color: #f44336;
+    color: #fff;
+}
+
+.memo-button.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+.memo-button.open-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.memo-button.open-button:hover {
+    background-color: #388e3c;
+}
+
+.memo-button.pin-button {
+    background-color: #007bff;
+}
+
+.memo-button.pin-button:hover {
+    background-color: #0056b3;
+}
+
+.memo-button.edit-button {
+    background-color: #008080;
+    color: #fff;
+}
+
+.memo-button.edit-button:hover {
+    background-color: #006666;
+}
+
+.memo-button.archive-button {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.memo-button.archive-button:hover {
+    background-color: #e0a800;
+}
+
+.memo-button.copy-button {
+    background-color: #9c27b0;
+    color: #fff;
+}
+
+.memo-button.copy-button:hover {
+    background-color: #7b1fa2;
+}
+
+.memo-button.cut-button {
+    background-color: #ff9800;
+    color: #212529;
+}
+
+.memo-button.cut-button:hover {
+    background-color: #f57c00;
+}
+
+.memo-button.paste-button {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.memo-button.paste-button:hover {
+    background-color: #388e3c;
+}
+
+
