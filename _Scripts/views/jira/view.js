@@ -1,5 +1,3 @@
-// MzQ5MDk2NjYwNjEzOh8bEy9FGuzbcSmR6YBAtNAB/gho
-
 // for the new jira instance
 
 const PROJECT_KEY_OR_ID = "SREPROVNG"; // Replace with your project key or ID
