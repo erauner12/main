@@ -1,25 +1,23 @@
 ---
+description: 
+publish: false
 starred: false
 status: "Triage"
 type: note
-tags:
-  - 
+tags: []
 cssclasses: 
 obsidianUIMode: source
 obsidianEditingMode: live
 template: "[[Default]]"
-publish: false
-description: 
 context: ""
 created: 20230107163637
 modified: 20230904133938
 source: 
 aliases:
-  - Resources
-linter-yaml-title-alias: Resources
-title: Resources
-labels:
-  - 
+  - Private
+linter-yaml-title-alias: Private
+title: Private
+labels: []
 date created: Wednesday, December 7th 2022, 11:34:44 pm
 project: ''
 search: 
@@ -35,7 +33,7 @@ You should **not** see the shh emoji (🤫) next to this public note -> [[README
 
 Daily Notes should also be kept private imo, but this is optional -- you should see a calendar emoji (📆) before a daily note -> [[2022-12-11]]
 
-# Resources
+# Private
 
 [Link Icons Tutorial](https://youtu.be/uWyeJLWKXUI)
 
